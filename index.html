@@ -364,7 +364,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form id="form" action="https://formsubmit.co/nadirtelecom@gmail.com">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -375,21 +375,23 @@
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
+              <div class="form-group mt-1">
+                <label for="name"> Your Message</label>
+                <textarea class="form-control" name="message" rows="8" id="msg" required></textarea>
               </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center my-3">
+                <button class="btn btn-info" id="button"> Send Message </button>
+            </div>
             </form>
+            <!--  EmailJS -->
+              <script type="text/javascript" 
+                 src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+              </script>
+              <script type="text/javascript">
+              (function() {
+              emailjs.init("user_c7sMrKxNk3jpKAODi2dqo");
+              })();
+              </script>
           </div>
 
         </div>
@@ -425,7 +427,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>
